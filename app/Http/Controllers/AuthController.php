@@ -14,6 +14,11 @@ class AuthController extends Controller
 
     public function index()
     {
+        return view('home');
+    }  
+
+    public function login()
+    {
         return view('login');
     }  
 
@@ -21,6 +26,24 @@ class AuthController extends Controller
     {
         return view('registration');
     }
+
+    public function postRegistration(Request $request)
+    {  
+        request()->validate([
+        'name' => 'required',
+        'email' => 'required|email|unique:users',
+        //'contact_number' => 'required|contact_number|unique:users',
+        'password' => 'required|min:6',
+        'teacher' =>'required',
+        ]);
+        
+        $data = $request->all();
+
+        $check = $this->create($data);
+      
+        return Redirect::to("login")->withSuccess('Great! You have Successfully signed up');
+    }
+    
     
     public function postLogin(Request $request)
     {
@@ -36,7 +59,7 @@ class AuthController extends Controller
             if($user->is_teacher()){
             return redirect()->intended('dashboard');
             }
-            return redirect()->intended('dash_student');
+            return redirect()->intended('home');
         }
         return Redirect::to("login")->withSuccess('Opps! You have entered invalid credentials');
     }
@@ -51,21 +74,23 @@ class AuthController extends Controller
        return Redirect::to("login")->withSuccess('Opps! You do not have access');
     }
 
-    public function dash_student()
+    public function home()
     {
 
       if(Auth::check()){
-        return view('dash_student');
+        return view('home');
       }
        return Redirect::to("login")->withSuccess('Opps! You do not have access');
     }
 
+  
 	public function create(array $data)
 	{
 	  return User::create([
 	    'name' => $data['name'],
 	    'email' => $data['email'],
-	    'password' => Hash::make($data['password'])
+      'password' => Hash::make($data['password']),
+      'teacher' => $data['teacher']
 	  ]);
 	}
 	

@@ -15,8 +15,13 @@ Route::get('/', function () {
     return view('login');
 });
 
-Route::get('login', 'AuthController@index');
+Route::get('home', 'AuthController@index');
+Route::get('login', 'AuthController@login'); 
 Route::post('post-login', 'AuthController@postLogin'); 
-Route::get('dash_student', 'AuthController@dash_student'); 
+Route::get('home', 'AuthController@home'); 
+Route::get('registration', 'AuthController@registration');
+Route::post('post-registration', 'AuthController@postRegistration'); 
 Route::get('dashboard', 'AuthController@dashboard'); 
 Route::get('logout', 'AuthController@logout');
+Route::get('grade', 'MenuController@grade');
+Route::get('monthly1', 'MenuController@monthly1');
