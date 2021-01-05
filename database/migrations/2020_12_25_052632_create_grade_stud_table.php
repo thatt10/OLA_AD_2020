@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateSubjStudTable extends Migration
+class CreateGradeStudTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,14 @@ class CreateSubjStudTable extends Migration
      */
     public function up()
     {
-        Schema::create('subj_stud', function (Blueprint $table) {
-            $table->string('subjCode')->unique();
+        Schema::create('grade_stud', function (Blueprint $table) {
+            $table->id();
+            $table->string('subjCode');
             $table->string('subjName');
             $table->string('email');
-            $table->timestamps();
+            $table->integer('marks');
+            $table->string('grade');
+            $table->string('exam_type');
         });
     }
 
@@ -28,6 +31,6 @@ class CreateSubjStudTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('subj_stud');
+        Schema::dropIfExists('grade_stud');
     }
 }

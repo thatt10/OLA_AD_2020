@@ -5,7 +5,7 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0">Grade</h1>
+            <h1 class="m-0">Assignment</h1>
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
@@ -24,20 +24,25 @@
                 <table class="table table-head-fixed">
                   <thead>
                     <tr>
-                      <th>Subject</th>
-                      <th>Marks</th>
-                      <th>Grade</th>
+                      <th>No</th>
+                      <th>Title</th>
+                      <th>Description</th>
+                      <th>Deadline</th>
+                      <th>Submission</th>
                     </tr>
                   </thead>
                   <tbody>
-                    <tr>   
+                  <tr>   
                    
-                    @foreach($data as $row)
-                      <td>{{$row->subjName}}</td>
-                      <td>{{$row->marks}}</td>
-                      <td>{{$row->grade}}</td>
+                    @foreach($details as $row)
+                      <td>{{$row->id}}</td>
+                      <td>{{$row->assgTitle}}</td>
+                      <td>{{$row->assgDesc}}</td>
+                      <td>{{$row->deadline}}</td>
+                      <td><a href="{{ route('subStore', $row->id)}}" class="btn btn-block btn-info">Submit</a></td>
                     </tr>
                     @endforeach
+                   
                  
                   </tbody>
                 </table>

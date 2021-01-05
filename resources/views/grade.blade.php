@@ -34,22 +34,22 @@
                     <tr>   
                       <td>1</td>
                       <td>Monthly Exam 1</td>
-                      <td><button type="button"  style="width:20%" class="btn btn-block btn-info"><a href="{{ asset('monthly1')}}" >View</a></button></td>
+                      <td><a href="{{ asset('monthly1')}}" class="btn btn-block btn-info" style="width:20%">View</a></td>
                     </tr>
                     <tr>
                       <td>2</td>
                       <td>Mid-Term Exam</td>
-                      <td><button type="button"  style="width:20%" class="btn btn-block btn-info">View</button></td>
+                      <td><a href="#" class="btn btn-block btn-info" style="width:20%">View</a></td>
                     </tr>
                     <tr>
                       <td>3</td>
                       <td>Monthly Exam 2</td>
-                      <td><button type="button"  style="width:20%" class="btn btn-block btn-info">View</button></td>
+                      <td><a href="#" class="btn btn-block btn-info" style="width:20%">View</a></td>
                     </tr>
                     <tr>
                       <td>4</td>
                       <td>Final Exam</td>
-                      <td><button type="button"  style="width:20%" class="btn btn-block btn-info">View</button></td>
+                      <td><a href="#" class="btn btn-block btn-info" style="width:20%">View</a></td>
                     </tr>
                     
                   </tbody>

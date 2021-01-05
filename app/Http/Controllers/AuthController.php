@@ -61,7 +61,7 @@ class AuthController extends Controller
             }
             return redirect()->intended('home');
         }
-        return Redirect::to("login")->withSuccess('Opps! You have entered invalid credentials');
+        return Redirect::to("login")->with('warning', 'Wrong email or password');
     }
 
     
@@ -71,7 +71,7 @@ class AuthController extends Controller
       if(Auth::check()){
         return view('dashboard');
       }
-       return Redirect::to("login")->withSuccess('Opps! You do not have access');
+       return Redirect::to("login")->with('warning', 'Wrong email or password');
     }
 
     public function home()
