@@ -35,3 +35,7 @@ Route::post('store/{id}', 'AssgController@store')->name('store');
 Route::post('edit/{id}', 'AssgController@edit')->name('edit');
 Route::get('editSubmission', 'AssgController@editSubmission');
 Route::get('submission', 'AssgController@submission');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
