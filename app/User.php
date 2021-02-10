@@ -37,9 +37,8 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-    public function is_teacher(){
-        if($this->teacher) 
-        {
+    public function is_teacher() {
+        if ($this->teacher) {
             return true;
         }
             return false;

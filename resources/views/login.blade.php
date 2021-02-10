@@ -49,6 +49,7 @@
             </div>
         
         </form>
+        <div class="text-center">Don't have an account? <a href="{{url('registration')}}">Sign Up here</a>.</div>
        
     </div>
 </body>

@@ -28,38 +28,18 @@
              
             
                   <div class="text-center">
-                  <div class="text-white"><h3>S01 - ENGLISH</h3></div>
+                  <div class="text-white"><h2>WELCOME TO OLA</h2></div>
                      <img style='height: 100%; width: 100%; object-fit: contain' src="https://evertonparkshs.eq.edu.au/ourcurriculum/SubjectAreas/PublishingImages/curriculum/subject-areas/subjects.jpg" alt="alternatetext" width="800" height="200">
                    
                   </div>
                   <br>
                   <!-- ./col -->
-                  <div class="text-center">
-                    <div id="sparkline-2"></div>
-                    <div class="btn btn-block btn-default"><a href="#">View Course</a></div>
-                   
-                  </div><br>
+                  <br>
                 </div>
 
             </div><!-- /.card -->
             <br><br>
-            <div class="card bg-gradient-danger">
-             
             
-                  <div class="text-center">
-                  <div class="text-white"><h3>S02 - Mathematics</h3></div>
-                     <img style='height: 100%; width: 100%; object-fit: contain' src="https://evertonparkshs.eq.edu.au/ourcurriculum/SubjectAreas/PublishingImages/curriculum/subject-areas/subjects.jpg" alt="alternatetext" width="800" height="200">
-                   
-                  </div>
-                  <br>
-                  <!-- ./col -->
-                  <div class="text-center">
-                    <div id="sparkline-2"></div>
-                    <div class="btn btn-block btn-default"><a href="#">View Course</a></div>
-                   
-                  </div><br>
-                </div>
-
             </div><!-- /.card -->
 
           </section>

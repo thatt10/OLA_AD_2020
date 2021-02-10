@@ -41,7 +41,7 @@ class AuthController extends Controller
 
         $check = $this->create($data);
       
-        return Redirect::to("login")->withSuccess('Great! You have Successfully signed up');
+        return view('login');
     }
     
     
