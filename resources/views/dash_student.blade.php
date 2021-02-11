@@ -209,7 +209,7 @@
               <i class="nav-icon fas fa-th"></i>
               <p>
                 Chat
-                <span class="right badge badge-danger">New</span>
+               
               </p>
             </a>
           </li>

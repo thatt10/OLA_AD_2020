@@ -56,13 +56,17 @@
             </div>
 
              <div class="form-group">
-			    <div >
-				    <span class="input-group-addon">Please select User Type:</span><br>
-                    <input type="radio" id="1"  value="1" name="teacher" required="required">
-                       <label> Teacher</label><br>
-                        <input type="radio" id="0" value="0" name="teacher" required="required">
-                        <label> Student</label><br>
-			    </div>
+			   
+                <div class="form-check">
+                <span class="input-group-addon">Please select User Type:</span><br>
+                          <input class="form-check-input" type="radio" id="1"  value="1" name="teacher" required="required">
+                          <label class="form-check-label">Teacher</label>
+                        </div>
+                        <div class="form-check">
+                          <input class="form-check-input" type="radio" id="0" value="0" name="teacher" required="required">
+                          <label class="form-check-label">Student</label>
+                        </div>
+                        
                 @if ($errors->has('teacher'))
                     <span class="error">{{ $errors->first('teacher') }}</span>
                 @endif  
@@ -79,3 +83,5 @@
     </div>
 </body>
 </html>
+
+
